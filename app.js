@@ -212,3 +212,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 showCover();
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js");
+}
