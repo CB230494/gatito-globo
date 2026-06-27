@@ -1,1 +1,222 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
 
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  background: #111;
+  color: #111;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pantallas */
+.screen {
+  width: min(94vw, 430px);
+  min-height: 720px;
+  background: #fff;
+  border: 14px solid #ff1493;
+  border-radius: 18px;
+  padding: 22px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 20, 147, 0.45);
+  overflow: hidden;
+}
+
+.paper-title {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 50px;
+}
+
+.heart {
+  font-size: 95px;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.btn {
+  display: block;
+  width: 80%;
+  margin: 28px auto;
+  padding: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  background: #fff;
+  border: 5px solid #e0a900;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.small-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid #111;
+  background: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* Menú */
+.menu-cat {
+  font-size: 130px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.info-box {
+  border: 5px solid #e0a900;
+  padding: 12px;
+  margin: 16px auto;
+  width: 85%;
+  font-size: 26px;
+  text-align: center;
+}
+
+.red {
+  color: #e92323;
+}
+
+/* Juego */
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lives {
+  font-size: 30px;
+}
+
+.pause {
+  width: 56px;
+  height: 56px;
+  font-size: 30px;
+  border: 4px solid #e0a900;
+  background: #fff;
+  font-weight: bold;
+}
+
+.game-area {
+  height: 455px;
+  position: relative;
+  margin-top: 20px;
+  border-bottom: 5px solid #45a849;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 55px;
+  opacity: 0.75;
+}
+
+.cloud.one {
+  left: 15px;
+  top: 80px;
+}
+
+.cloud.two {
+  right: 20px;
+  top: 130px;
+}
+
+.sun {
+  position: absolute;
+  right: 35px;
+  top: 20px;
+  font-size: 50px;
+}
+
+.flower {
+  position: absolute;
+  bottom: 5px;
+  font-size: 40px;
+}
+
+.flower.left {
+  left: 50px;
+}
+
+.flower.right {
+  right: 55px;
+}
+
+.cat {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 105px;
+  z-index: 2;
+}
+
+.balloon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 75px;
+  z-index: 3;
+  transition: top 0.08s linear;
+}
+
+.string {
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 110px;
+  background: #111;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: top 0.08s linear;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  padding: 0 25px;
+}
+
+.action-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Game over */
+.gameover-title {
+  text-align: center;
+  font-size: 38px;
+  color: #e92323;
+  margin-top: 65px;
+}
+
+.sad-cat {
+  text-align: center;
+  font-size: 105px;
+}
+
+@media (max-width: 500px) {
+  .screen {
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}
